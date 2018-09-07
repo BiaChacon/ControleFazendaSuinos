@@ -4,7 +4,7 @@ import java.sql.Date;
 
 /**
  *
- * @author bh_chacon & igor
+ * @author bh_chacon
  */
 public class Time {
     private String nome;

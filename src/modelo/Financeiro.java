@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bh_chacon & igor
+ * @author bh_chacon
  */
 public class Financeiro {
     private double taxaEstadio;
