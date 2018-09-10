@@ -4,6 +4,8 @@
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,42 +15,81 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="300.0" prefWidth="149.0" style="-fx-background-color: ciano;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="297.0" prefWidth="181.0" style="-fx-background-color: ciano;" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="164.0" text="INÍCIO" textFill="BLUEVIOLET">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="45.0" prefWidth="160.0" text="INÍCIO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/stadium%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" prefHeight="45.0" prefWidth="160.0" text="ATLETAS" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/team-bench.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="161.0" text="CALENDÁRIO" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="58.0" prefWidth="180.0" text="CALENDÁRIO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="49.0" prefWidth="167.0" text="FINANCEIRO" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="54.0" prefWidth="184.0" text="FINANCEIRO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/money-bag.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" prefHeight="31.0" prefWidth="159.0" text="SOBRE" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/customer-service.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" prefHeight="51.0" prefWidth="182.0" text="SAIR" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
          </children>
          <BorderPane.margin>
@@ -60,16 +101,16 @@
       </VBox>
    </left>
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
+      <HBox prefHeight="64.0" prefWidth="547.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
          <children>
-            <JFXHamburger prefHeight="100.0" prefWidth="103.0" style="-fx-background-color: blueviolet;" />
             <AnchorPane prefHeight="100.0" prefWidth="516.0">
                <children>
-                  <Label layoutX="158.0" layoutY="33.0" prefHeight="28.0" prefWidth="90.0" text="INÍCIO" textFill="#ebe4e4" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="33.0">
+                  <Label layoutX="158.0" layoutY="33.0" prefHeight="28.0" prefWidth="90.0" text="INÍCIO" textFill="WHITE" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="33.0">
                      <font>
                         <Font name="System Bold" size="27.0" />
                      </font>
                   </Label>
+                  <JFXHamburger layoutY="-5.0" prefHeight="112.0" prefWidth="103.0" style="-fx-background-color: blueviolet;" stylesheets="@newfile.css" />
                </children>
                <padding>
                   <Insets left="100.0" />

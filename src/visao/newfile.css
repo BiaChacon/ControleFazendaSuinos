@@ -1,0 +1,7 @@
+.jfx-hamburger {
+	 -fx-background-color : blueviolet ;
+}
+
+.jfx-hamburger StackPane {
+	 -fx-background-color : white ;
+}
