@@ -40,12 +40,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="45.0" prefWidth="149.0" text="SOBRE" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="31.0" prefWidth="159.0" text="SOBRE" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="51.0" prefWidth="149.0" text="SAIR" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="51.0" prefWidth="182.0" text="SAIR" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
