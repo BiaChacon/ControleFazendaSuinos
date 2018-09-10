@@ -15,76 +15,92 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <VBox prefHeight="297.0" prefWidth="181.0" style="-fx-background-color: ciano;" BorderPane.alignment="CENTER">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="58.0" prefWidth="1796.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="45.0" prefWidth="160.0" text="INÍCIO" textFill="BLUEVIOLET">
+            <JFXHamburger prefHeight="100.0" prefWidth="89.0" stylesheets="@newfile.css" />
+            <AnchorPane prefHeight="55.0" prefWidth="529.0">
+               <children>
+                  <Label layoutX="810.0" layoutY="-3.0" prefHeight="72.0" prefWidth="529.0" text="INÍCIO" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="821.0" prefWidth="227.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="60.0" prefWidth="242.0" text="INÍCIO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="45.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Downloads/stadium%20(1).png" />
+                        <Image url="@../../../../../Downloads/stadium.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="45.0" prefWidth="160.0" text="ATLETAS" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="60.0" prefWidth="238.0" text="ATLETA" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="45.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../Downloads/team-bench.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="58.0" prefWidth="180.0" text="CALENDÁRIO" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="66.0" prefWidth="233.0" text="CALENDÁRIO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../Downloads/calendar.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="54.0" prefWidth="184.0" text="FINANCEIRO" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="70.0" prefWidth="227.0" text="FINANCEIRO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../Downloads/money-bag.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="31.0" prefWidth="159.0" text="SOBRE" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="240.0" text="SOBRE" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="33.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../Downloads/customer-service.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" prefHeight="51.0" prefWidth="182.0" text="SAIR" textFill="BLUEVIOLET">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="55.0" prefWidth="245.0" text="SAIR" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="46.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="57.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../Downloads/exit.png" />
                      </image>
@@ -92,33 +108,14 @@
                </graphic>
             </JFXButton>
          </children>
-         <BorderPane.margin>
-            <Insets left="10.0" />
-         </BorderPane.margin>
          <opaqueInsets>
-            <Insets left="10.0" />
+            <Insets />
          </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </BorderPane.margin>
       </VBox>
    </left>
-   <top>
-      <HBox prefHeight="64.0" prefWidth="547.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
-         <children>
-            <AnchorPane prefHeight="100.0" prefWidth="516.0">
-               <children>
-                  <Label layoutX="158.0" layoutY="33.0" prefHeight="28.0" prefWidth="90.0" text="INÍCIO" textFill="WHITE" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="33.0">
-                     <font>
-                        <Font name="System Bold" size="27.0" />
-                     </font>
-                  </Label>
-                  <JFXHamburger layoutY="-5.0" prefHeight="112.0" prefWidth="103.0" style="-fx-background-color: blueviolet;" stylesheets="@newfile.css" />
-               </children>
-               <padding>
-                  <Insets left="100.0" />
-               </padding>
-            </AnchorPane>
-         </children>
-      </HBox>
-   </top>
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
