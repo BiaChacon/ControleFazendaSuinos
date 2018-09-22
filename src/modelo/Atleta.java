@@ -1,10 +1,5 @@
-
 package modelo;
 
-/**
- *
- * @author bh_chacon
- */
 public class Atleta {
     private String nome, cpf, email, endereco;
     private int idade, telefone;

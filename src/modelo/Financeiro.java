@@ -2,10 +2,6 @@ package modelo;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author bh_chacon
- */
 public class Financeiro {
     private double taxaEstadio;
 

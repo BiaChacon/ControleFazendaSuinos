@@ -2,10 +2,6 @@ package modelo;
 
 import java.sql.Date;
 
-/**
- *
- * @author bh_chacon
- */
 public class Jogo {
     private Date dataHoraPartida;
     private String local, adversario;
