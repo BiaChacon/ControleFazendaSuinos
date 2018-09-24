@@ -37,20 +37,25 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
+            <JFXButton fx:id="btConcluirPartida" layoutX="407.0" layoutY="24.0" onAction="#concluirPartida" text="CONCLUIR PARTIDA" textFill="BLUEVIOLET">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </bottom>
    <center>
-      <TableView prefHeight="581.0" prefWidth="1029.0" stylesheets="@newfile.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabelaCalendario" prefHeight="581.0" prefWidth="1029.0" stylesheets="@newfile.css" BorderPane.alignment="CENTER">
         <columns>
-            <TableColumn prefWidth="104.0" style="-fx-background-color: deepskyblue;" text="DATA" />
-          <TableColumn prefWidth="93.0" style="-fx-background-color: deepskyblue;" text="HORÁRIO" />
-          <TableColumn prefWidth="137.0" style="-fx-background-color: deepskyblue;" text="LOCAL" />
-            <TableColumn minWidth="0.0" prefWidth="238.0" style="-fx-background-color: deepskyblue;" />
-            <TableColumn minWidth="0.0" prefWidth="48.0" style="-fx-background-color: deepskyblue;" />
-            <TableColumn minWidth="0.0" prefWidth="220.0" style="-fx-background-color: deepskyblue;" />
-            <TableColumn prefWidth="201.0" style="-fx-background-color: deepskyblue;" text="COMPETIÇÃO" />
-            <TableColumn minWidth="0.0" prefWidth="139.0" style="-fx-background-color: deepskyblue;" text="RENDA" />
+            <TableColumn fx:id="colunaData" prefWidth="95.0" style="-fx-background-color: deepskyblue;" text="DATA" />
+          <TableColumn fx:id="colunaHorario" prefWidth="85.0" style="-fx-background-color: deepskyblue;" text="HORÁRIO" />
+          <TableColumn fx:id="colunaLocal" prefWidth="154.0" style="-fx-background-color: deepskyblue;" text="LOCAL" />
+            <TableColumn fx:id="colunaTimeCasa" minWidth="0.0" prefWidth="196.0" style="-fx-background-color: deepskyblue;" />
+            <TableColumn fx:id="colunaX" minWidth="0.0" prefWidth="36.0" style="-fx-background-color: deepskyblue;" />
+            <TableColumn fx:id="coluaTimeFora" minWidth="0.0" prefWidth="182.0" style="-fx-background-color: deepskyblue;" />
+            <TableColumn fx:id="colunaCompeticao" prefWidth="164.0" style="-fx-background-color: deepskyblue;" text="COMPETIÇÃO" />
+            <TableColumn fx:id="colunaRendaPartida" minWidth="0.0" prefWidth="116.0" style="-fx-background-color: deepskyblue;" text="RENDA" />
         </columns>
       </TableView>
    </center>

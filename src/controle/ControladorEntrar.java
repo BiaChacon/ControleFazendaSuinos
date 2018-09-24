@@ -1,5 +1,6 @@
 package controle;
 
+import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +9,9 @@ import javafx.scene.Scene;
 
 public class ControladorEntrar {
     @FXML
-    private void entar() {
+    private JFXButton btEntrar;
+    @FXML
+    private void entrar() {
         Parent Principal;
         try {
             Principal = FXMLLoader.load(getClass().getResource("/visao/Principal.fxml"));

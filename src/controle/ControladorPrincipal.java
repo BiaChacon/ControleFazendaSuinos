@@ -80,7 +80,7 @@ public class ControladorPrincipal {
             try{
                 Parent sair = FXMLLoader.load(getClass().getResource("/visao/Entrar.fxml"));
                 Scene scene = new Scene(entrar);
-                Principal.getStagePrincipal().setScene(scene);
+                Principal.getStageEntar().setScene(scene);
             }catch(IOException e){
                 e.printStackTrace();
             }
