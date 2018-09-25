@@ -17,22 +17,22 @@ public class ControladorAtleta {
        private TableColumn<Atleta, String > colunaNomeAtleta;
        
        @FXML
-       private TableColumn<Atleta, int> colunaIdadeAtleta;
+       private TableColumn<Atleta, Integer> colunaIdadeAtleta;
        
        @FXML
-       private TableColumn<Atleta, double> colunaSalarioAtleta;
+       private TableColumn<Atleta, Double> colunaSalarioAtleta;
        
        @FXML
        private TableColumn<Atleta, String> colunaCPFAtleta;
        
        @FXML
-       private TableColumn<Atleta, int> colunaTelefoneAtleta;
+       private TableColumn<Atleta, Integer> colunaTelefoneAtleta;
        
        @FXML
        private TableColumn<Atleta, String> colunaEnderecoAtleta;
        
        @FXML
-       private TableColumn<Atleta, int> colunaEmailAtleta;
+       private TableColumn<Atleta, Integer> colunaEmailAtleta;
        
        
         

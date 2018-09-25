@@ -12,7 +12,7 @@ import javafx.scene.layout.BorderPane;
 import principal.Principal;
 
 public class ControladorPrincipal {
-
+        
 	@FXML
 	private JFXButton btInicio, btAtleta, btCalendario, btFinanceiro, btSobre, btSair;
 	
@@ -38,7 +38,6 @@ public class ControladorPrincipal {
 			borderPrincipal.setCenter(gerenciarAtleta);
 			labelPrincipal.setText("ATLETA");
 		} catch (IOException e) {
-			e.printStackTrace();
 		}	
 	}
 	
@@ -60,7 +59,6 @@ public class ControladorPrincipal {
 			borderPrincipal.setCenter(financeiro);
 			labelPrincipal.setText("FINANCEIRO");
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 	
@@ -71,7 +69,6 @@ public class ControladorPrincipal {
 			borderPrincipal.setCenter(sobre);
 			labelPrincipal.setText("SOBRE");
 		} catch (IOException e) {
-			e.printStackTrace();
 		}	
 	}
 	
@@ -79,10 +76,9 @@ public class ControladorPrincipal {
 	private void sair() {
             try{
                 Parent sair = FXMLLoader.load(getClass().getResource("/visao/Entrar.fxml"));
-                Scene scene = new Scene(entrar);
-                Principal.getStageEntar().setScene(scene);
+                //Scene scene = new Scene(sair);
+                //Principal.getStage().setScene(scene);
             }catch(IOException e){
-                e.printStackTrace();
             }
 	}
 	

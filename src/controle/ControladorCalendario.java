@@ -15,11 +15,8 @@ public class ControladorCalendario {
        private TableView<Jogo> tabelaCalendario;
        
        @FXML
-       private TableColumn<Jogo, Date> colunaData;
-       
-       @FXML
-       private TableColumn<Jogo, Date> colunaHorario;
-       
+       private TableColumn<Jogo, Date> colunaDataHorario;
+      
        @FXML
        private TableColumn<Jogo, String> colunaLocal;
        
@@ -37,8 +34,8 @@ public class ControladorCalendario {
        
        @FXML
        private TableColumn<Jogo, String> colunaRendaPartida;
-       
-       @FXML
-       
-       
+        
+       /*@FXML
+       private TableColumn<> colunaStatusPartida ;*/
+      
 }

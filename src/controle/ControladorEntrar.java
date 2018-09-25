@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class ControladorEntrar {
     @FXML
@@ -19,7 +20,11 @@ public class ControladorEntrar {
             return;
         }
             Scene scene = new Scene(Principal);
-            Principal.getStagePrincipal().setScene(scene);
+            //Principal.getStagePrincipal().setScene(scene);
+            //Stage s = new Stage();
+            //s.setScene(scene);
+            
+            
         
     }
 

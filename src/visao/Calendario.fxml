@@ -13,7 +13,7 @@
    <bottom>
       <AnchorPane prefHeight="134.0" prefWidth="1029.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton fx:id="btAdicionarPartida" layoutX="-3.0" layoutY="24.0" onAction="#adicionarPartida" text="ADICIONAR PARTIDA" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btAdicionarPartida" layoutX="40.0" layoutY="42.0" onAction="#adicionarPartida" text="ADICIONAR PARTIDA" textFill="BLUEVIOLET">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btCancelarPartida" layoutY="84.0" onAction="#cancelarPartida" text="CANCELAR PARTIDA" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btCancelarPartida" layoutX="305.0" layoutY="42.0" onAction="#cancelarPartida" text="CANCELAR PARTIDA" textFill="BLUEVIOLET">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,10 +37,17 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btConcluirPartida" layoutX="407.0" layoutY="24.0" onAction="#concluirPartida" text="CONCLUIR PARTIDA" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btConcluirPartida" layoutX="554.0" layoutY="42.0" onAction="#concluirPartida" text="CONCLUIR PARTIDA" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
          </children>
       </AnchorPane>
@@ -48,14 +55,14 @@
    <center>
       <TableView fx:id="tabelaCalendario" prefHeight="581.0" prefWidth="1029.0" stylesheets="@newfile.css" BorderPane.alignment="CENTER">
         <columns>
-            <TableColumn fx:id="colunaData" prefWidth="95.0" style="-fx-background-color: deepskyblue;" text="DATA" />
-          <TableColumn fx:id="colunaHorario" prefWidth="85.0" style="-fx-background-color: deepskyblue;" text="HORÁRIO" />
-          <TableColumn fx:id="colunaLocal" prefWidth="154.0" style="-fx-background-color: deepskyblue;" text="LOCAL" />
-            <TableColumn fx:id="colunaTimeCasa" minWidth="0.0" prefWidth="196.0" style="-fx-background-color: deepskyblue;" />
+            <TableColumn fx:id="colunaDataHorario" prefWidth="153.0" style="-fx-background-color: deepskyblue;" text="DATA / HORÁRIO" />
+          <TableColumn fx:id="colunaLocal" prefWidth="133.0" style="-fx-background-color: deepskyblue;" text="LOCAL" />
+            <TableColumn fx:id="colunaTimeCasa" minWidth="0.0" prefWidth="159.0" style="-fx-background-color: deepskyblue;" />
             <TableColumn fx:id="colunaX" minWidth="0.0" prefWidth="36.0" style="-fx-background-color: deepskyblue;" />
             <TableColumn fx:id="coluaTimeFora" minWidth="0.0" prefWidth="182.0" style="-fx-background-color: deepskyblue;" />
             <TableColumn fx:id="colunaCompeticao" prefWidth="164.0" style="-fx-background-color: deepskyblue;" text="COMPETIÇÃO" />
-            <TableColumn fx:id="colunaRendaPartida" minWidth="0.0" prefWidth="116.0" style="-fx-background-color: deepskyblue;" text="RENDA" />
+            <TableColumn fx:id="colunaRendaPartida" minWidth="0.0" prefWidth="153.0" style="-fx-background-color: deepskyblue;" text="RENDA" />
+            <TableColumn fx:id="colunaStatusPartida" prefWidth="48.0" />
         </columns>
       </TableView>
    </center>
