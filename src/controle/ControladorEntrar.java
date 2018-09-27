@@ -7,8 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import principal.Principal;
 
 public class ControladorEntrar {
+    Principal p = new Principal();
     @FXML
     private JFXButton btEntrar;
     @FXML
@@ -20,9 +22,9 @@ public class ControladorEntrar {
             return;
         }
             Scene scene = new Scene(Principal);
-            //Principal.getStagePrincipal().setScene(scene);
-            //Stage s = new Stage();
-            //s.setScene(scene);
+            p.getStagePrincipal().setScene(scene);
+            Stage s = new Stage();
+            s.setScene(scene);
             
             
         

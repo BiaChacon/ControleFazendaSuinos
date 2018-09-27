@@ -37,5 +37,19 @@ public class ControladorCalendario {
         
        /*@FXML
        private TableColumn<> colunaStatusPartida ;*/
-      
+       
+       @FXML
+       private void adicionarPartida(){
+       
+       }
+       
+       @FXML
+       private void cancelarPartida(){
+       
+       }
+       
+       @FXML
+       private void concluirPartida(){
+       
+       }
 }

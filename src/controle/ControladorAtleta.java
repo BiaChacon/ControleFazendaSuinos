@@ -34,6 +34,20 @@ public class ControladorAtleta {
        @FXML
        private TableColumn<Atleta, Integer> colunaEmailAtleta;
        
+       @FXML
+       private void cadastrarAtleta(){
+       
+       }
+       
+       @FXML
+       private void removerAtleta(){
+       
+       }
+       
+       @FXML
+       private void atualizarAtleta(){
+       
+       }
        
         
 }

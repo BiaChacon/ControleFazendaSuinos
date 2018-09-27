@@ -32,7 +32,7 @@ public class ControladorPrincipal {
 	}
 	
 	@FXML
-	private void gerenciarAtleta() {
+	private void gerenciarAtletas() {
 		try {
 			Parent gerenciarAtleta =  FXMLLoader.load(getClass().getResource("/visao/Atleta.fxml"));
 			borderPrincipal.setCenter(gerenciarAtleta);
@@ -63,7 +63,7 @@ public class ControladorPrincipal {
 	}
 	
 	@FXML
-	private void ajuda() {
+	private void sobre() {
 		try {
 			Parent sobre = FXMLLoader.load(getClass().getResource("/visao/Sobre.fxml"));
 			borderPrincipal.setCenter(sobre);
@@ -74,13 +74,12 @@ public class ControladorPrincipal {
 	
 	@FXML
 	private void sair() {
+        Principal p2 = new Principal();
             try{
                 Parent sair = FXMLLoader.load(getClass().getResource("/visao/Entrar.fxml"));
-                //Scene scene = new Scene(sair);
-                //Principal.getStage().setScene(scene);
+                Scene scene = new Scene(sair);
+                p2.getStageEntrar().setScene(scene);
             }catch(IOException e){
             }
 	}
-	
-    
 }
