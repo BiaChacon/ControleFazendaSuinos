@@ -12,81 +12,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="controle.ControladorPrincipal" fx:id="borderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="borderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorPrincipal">
    <left>
-      <VBox prefHeight="821.0" prefWidth="227.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="787.0" prefWidth="245.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
             <JFXButton fx:id="btInicio" alignment="BASELINE_LEFT" onAction="#inicio" prefHeight="60.0" prefWidth="242.0" text="INÍCIO" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/stadium.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXButton fx:id="btAtleta" alignment="BASELINE_LEFT" onAction="#gerenciarAtletas" prefHeight="60.0" prefWidth="238.0" text="ATLETA" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btSuinos" alignment="BASELINE_LEFT" onAction="#suinos" prefHeight="60.0" prefWidth="238.0" text="SUÍNOS" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/team-bench.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXButton fx:id="btCalendario" alignment="BASELINE_LEFT" onAction="#gerenciarJogos" prefHeight="66.0" prefWidth="233.0" text="CALENDÁRIO" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btBaias" alignment="BASELINE_LEFT" onAction="#baias" prefHeight="66.0" prefWidth="233.0" text="BAIAS" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/calendar.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXButton fx:id="btFinanceiro" alignment="BASELINE_LEFT" onAction="#financeiro" prefHeight="70.0" prefWidth="227.0" text="FINANCEIRO" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btColocarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#colocarPorcoNaBaia" prefHeight="70.0" prefWidth="227.0" text="COLOCAR PORCO NA BAIA" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/money-bag.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXButton fx:id="btSobre" alignment="BASELINE_LEFT" onAction="#sobre" prefHeight="50.0" prefWidth="240.0" text="SOBRE" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btRemoverPorcoDaBaia" alignment="BASELINE_LEFT" onAction="#removerPorcoDaBaia" prefHeight="50.0" prefWidth="240.0" text="REMOVER PORCO DA BAIA" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/customer-service.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXButton fx:id="btSair" alignment="BASELINE_LEFT" onAction="#sair" prefHeight="55.0" prefWidth="245.0" text="SAIR" textFill="BLUEVIOLET">
+            <JFXButton fx:id="btVizualizarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#vizualizarPorcoNaBaia" prefHeight="55.0" prefWidth="245.0" text="VIZUALIZAR PORCO NA BAIA" textFill="BLUEVIOLET">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="57.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/exit.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
          </children>
          <opaqueInsets>
@@ -98,12 +56,19 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="anchorInicial" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="anchorInicial" prefHeight="500.0" prefWidth="838.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="800.0" layoutX="174.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/3823406.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </center>
    <top>
       <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="labelPrincipal" layoutX="810.0" layoutY="-3.0" prefHeight="98.0" prefWidth="529.0" text="INÍCIO" textFill="WHITE">
+            <Label fx:id="labelPrincipal" alignment="CENTER" layoutX="96.0" layoutY="-3.0" prefHeight="98.0" prefWidth="1080.0" text="CONTROLE FAZENDA DE SUÍNOS" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>

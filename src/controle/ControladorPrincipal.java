@@ -5,16 +5,14 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import principal.Principal;
 
 public class ControladorPrincipal {
         
 	@FXML
-	private JFXButton btInicio, btAtleta, btCalendario, btFinanceiro, btSobre, btSair;
+	private JFXButton btInicio, btSuinos, btBaias, btColocarPorcoNaBaia, btRemoverPorcoDaBaia, btVizualizarPorcoNaBaia;
 	
 	@FXML
 	private BorderPane borderPrincipal;
@@ -28,58 +26,57 @@ public class ControladorPrincipal {
         @FXML
 	private void inicio() {
 		borderPrincipal.setCenter(anchorInicial);
-		labelPrincipal.setText("INÍCIO");
+		labelPrincipal.setText("CONTROLE FAZENDA DE SUÍNOS");
 	}
 	
 	@FXML
-	private void gerenciarAtletas() {
+	private void suinos() {
 		try {
-			Parent gerenciarAtleta =  FXMLLoader.load(getClass().getResource("/visao/Atleta.fxml"));
-			borderPrincipal.setCenter(gerenciarAtleta);
-			labelPrincipal.setText("ATLETA");
+			Parent suinos =  FXMLLoader.load(getClass().getResource("/visao/Suinos.fxml"));
+			borderPrincipal.setCenter(suinos);
+			labelPrincipal.setText("SUÍNOS");
 		} catch (IOException e) {
 		}	
 	}
 	
 	@FXML
-	private void gerenciarJogos() {
+	private void baias() {
 		try {
-			Parent gerenciarJogos = FXMLLoader.load(getClass().getResource("/visao/Calendario.fxml"));
-			borderPrincipal.setCenter(gerenciarJogos);
-			labelPrincipal.setText("CALENDÁRIO");
+			Parent baias = FXMLLoader.load(getClass().getResource("/visao/Baias.fxml"));
+			borderPrincipal.setCenter(baias);
+			labelPrincipal.setText("BAIAS");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}	
 	}
 	
 	@FXML
-	private void financeiro() {
+	private void colocarPorcoNaBaia() {
 		try {
-			Parent financeiro = FXMLLoader.load(getClass().getResource("/visao/Financeiro.fxml"));
-			borderPrincipal.setCenter(financeiro);
-			labelPrincipal.setText("FINANCEIRO");
+			Parent colocarPorcoNaBaia = FXMLLoader.load(getClass().getResource("/visao/ColocarPorcoNaBaia.fxml"));
+			borderPrincipal.setCenter(colocarPorcoNaBaia);
+			labelPrincipal.setText("COLOCAR PORCO NA BAIA");
 		} catch (IOException e) {
 		}
 	}
-	
-	@FXML
-	private void sobre() {
+        
+        @FXML
+	private void removerPorcoDaBaia() {
 		try {
-			Parent sobre = FXMLLoader.load(getClass().getResource("/visao/Sobre.fxml"));
-			borderPrincipal.setCenter(sobre);
-			labelPrincipal.setText("SOBRE");
+			Parent removerPorcoDaBaia = FXMLLoader.load(getClass().getResource("/visao/RemoverPorcoDaBaia.fxml"));
+			borderPrincipal.setCenter(removerPorcoDaBaia);
+			labelPrincipal.setText("REMOVER PORCO DA BAIA");
 		} catch (IOException e) {
-		}	
+		}
 	}
-	
-	@FXML
-	private void sair() {
-        Principal p2 = new Principal();
-            try{
-                Parent sair = FXMLLoader.load(getClass().getResource("/visao/Entrar.fxml"));
-                Scene scene = new Scene(sair);
-                p2.getStageEntrar().setScene(scene);
-            }catch(IOException e){
-            }
+       
+    @FXML
+	private void  vizualizarPorcoNaBaia() {
+		try {
+			Parent  vizualizarPorcoNaBaia = FXMLLoader.load(getClass().getResource("/visao/VizualizarPorcoNaBaia.fxml"));
+			borderPrincipal.setCenter(vizualizarPorcoNaBaia);
+			labelPrincipal.setText("VIZUALIZAR PORCO DA BAIA");
+		} catch (IOException e) {
+		}
 	}
 }

@@ -9,24 +9,15 @@ import javafx.scene.Scene;
 
 
 public class Principal extends Application {
-    private Stage stage1;
-    public Stage getStagePrincipal(){
-        return stage1;
-    }
-    public Stage getStageEntrar(){
-        return stage1;
-    }
-    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root;
-        root = FXMLLoader.load(getClass().getResource("/visao/Entrar.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/visao/Principal.fxml"));
         Scene scene = new Scene(root);
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
-        stage1 = stage;
-        stage.setTitle("Pobol");
+        stage.setTitle("Controle Fazenda Suinos");
     }
     public static void main(String[] args) {
         launch(args);
