@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controle;
 
-/**
- *
- * @author Aluno
- */
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import modelo.Baia;
+import modelo.Suino;
+
 public class ControladorVizualizarPorcoNaBaia {
-    
+  @FXML
+       private TableView<Suino> tabelaPorcoBaia;
+  @FXML
+       private TableColumn<Baia, Integer > colunaBaia;
+  
+  @FXML
+       private TableColumn<Suino, String> colunaPorco;
 }

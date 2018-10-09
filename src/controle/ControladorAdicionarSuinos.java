@@ -2,12 +2,12 @@ package controle;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import persistencia.SuinoDAO;
+
 
 public class ControladorAdicionarSuinos {
+    private SuinoDAO suinoDAO = new SuinoDAO();
     @FXML
         private JFXTextField textNome, textDataAquisicao, textDataNascimento;
     @FXML
@@ -17,6 +17,7 @@ public class ControladorAdicionarSuinos {
     
     @FXML
 	private void cadastrarSuino() {
+            
             
           ControladorPrincipal.controlador.suinos();
         }

@@ -1,20 +1,18 @@
 package controle;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXComboBox;
 import javafx.fxml.FXML;
 
 public class ControladorRemoverPorcoDaBaia {
     @FXML
-        private JFXTextField textIDBaia;
-    @FXML
-        private JFXButton btRemoverBaia;
-    
-    ControladorPrincipal controlador = new ControladorPrincipal();
+        private JFXComboBox cbPorco, cbBaia; 
     
     @FXML
-	private void removerBaia() {
+        private JFXButton btRemover;
             
-          ControladorPrincipal.controlador.baias();
-        }   
+    @FXML
+        private void removerPorcoDaBaia(){
+        
+        }
 }
