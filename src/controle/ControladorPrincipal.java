@@ -2,14 +2,18 @@ package controle;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
-public class ControladorPrincipal {
+public class ControladorPrincipal implements Initializable{
+        static ControladorPrincipal controlador;
         
 	@FXML
 	private JFXButton btInicio, btSuinos, btBaias, btColocarPorcoNaBaia, btRemoverPorcoDaBaia, btVizualizarPorcoNaBaia;
@@ -30,7 +34,7 @@ public class ControladorPrincipal {
 	}
 	
 	@FXML
-	private void suinos() {
+	 void suinos() {
 		try {
 			Parent suinos =  FXMLLoader.load(getClass().getResource("/visao/Suinos.fxml"));
 			borderPrincipal.setCenter(suinos);
@@ -40,7 +44,7 @@ public class ControladorPrincipal {
 	}
 	
 	@FXML
-	private void baias() {
+	void baias() {
 		try {
 			Parent baias = FXMLLoader.load(getClass().getResource("/visao/Baias.fxml"));
 			borderPrincipal.setCenter(baias);
@@ -79,4 +83,9 @@ public class ControladorPrincipal {
 		} catch (IOException e) {
 		}
 	}
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        controlador = this;
+    }
 }

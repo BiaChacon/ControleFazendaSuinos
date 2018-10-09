@@ -56,9 +56,9 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="anchorInicial" prefHeight="500.0" prefWidth="838.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorInicial" prefHeight="600.0" prefWidth="843.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="300.0" fitWidth="800.0" layoutX="174.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="352.0" fitWidth="750.0" layoutX="57.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/3823406.jpg" />
                </image>
@@ -78,6 +78,6 @@
       </AnchorPane>
    </top>
    <right>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="600.0" prefWidth="82.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>

@@ -8,9 +8,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import modelo.Suino;
 
 public class ControladorBaias {
+  @FXML
+    private AnchorPane anchorBaias;
+  @FXML
+    private BorderPane borderBaias;
   @FXML
     private  JFXButton btAdicionar, btRemover;
   
@@ -29,7 +35,7 @@ public class ControladorBaias {
 	private void adicionarBaia() {
             try {
 		Parent adicionarBaia =  FXMLLoader.load(getClass().getResource("/visao/AdicionarBaias.fxml"));
-			
+		borderBaias.setCenter(adicionarBaia);	
 		} catch (IOException e) {
 		}	
 	} 
@@ -37,7 +43,7 @@ public class ControladorBaias {
 	private void removerBaia() {
             try {
 		Parent removerBaia =  FXMLLoader.load(getClass().getResource("/visao/RemoverBaias.fxml"));
-			
+		borderBaias.setCenter(removerBaia);	
 		} catch (IOException e) {
 		}	
 	} 

@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controle.ControladorAdicionarSuinos">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorAdicionarSuinos">
    <children>
-      <Label layoutX="142.0" layoutY="87.0" text="Nome " />
-      <Label layoutX="142.0" layoutY="141.0" text="Data Nascimento" />
-      <Label layoutX="140.0" layoutY="215.0" text="Data de Aquisição" />
-      <JFXTextField layoutX="140.0" layoutY="104.0" />
+      <Label alignment="CENTER" layoutX="198.0" layoutY="39.0" text="Nome " textFill="#11b7e0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="200.0" layoutY="132.0" text="Data Nascimento" textFill="#11b7e0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="197.0" layoutY="218.0" text="Data de Aquisição" textFill="#11b7e0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <JFXTextField fx:id="textNome" layoutX="199.0" layoutY="66.0" prefHeight="31.0" prefWidth="188.0" />
+      <JFXDatePicker fx:id="dateNascimento" defaultColor="#11b7e0" layoutX="198.0" layoutY="159.0" />
+      <JFXDatePicker fx:id="dateAquisicao" defaultColor="#11b7e0" layoutX="198.0" layoutY="245.0" />
+      <JFXButton fx:id="btCadastrar" layoutX="235.0" layoutY="316.0" onAction="#cadastrarSuino" style="-fx-background-color: #11b7e0;" text="CADASTRAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
