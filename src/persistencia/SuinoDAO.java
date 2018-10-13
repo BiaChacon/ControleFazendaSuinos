@@ -12,7 +12,7 @@ public class SuinoDAO {
     public void insertIntoSuino(String nome, Date dataNasc, Date dataAq) {
         System.err.println("Data "+dataNasc.getTime());
         c.dbConnection();
-        String query = "INSERT INTO Suino(nome, DataNascimento, DataAquisicao) VALUES (?, ?, ?);";
+        String query = "INSERT INTO SUINO(nome, DataNascimento, DataAquisicao) VALUES (?, ?, ?);";
         try {
             PreparedStatement pst = c.getConnection().prepareStatement(query);
             pst.setString(1, nome);
