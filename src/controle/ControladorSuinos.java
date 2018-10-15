@@ -2,21 +2,24 @@ package controle;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Date;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import modelo.Baia;
 import modelo.Suino;
 import persistencia.SuinoDAO;
 
-public class ControladorSuinos {
+public class ControladorSuinos implements Initializable {
     SuinoDAO suinoDAO = new SuinoDAO();
     @FXML
     private AnchorPane anchorSuinos;
@@ -39,17 +42,13 @@ public class ControladorSuinos {
     @FXML
        private TableColumn<Suino, Date> colunaDataAquisicao;
     
-    @FXML
-        public void tabelaBaia(){
-            colunaID.setCellValueFactory(new PropertyValueFactory<>("id"));
+     private ObservableList<Suino> listaSuino = FXCollections.observableArrayList();
+     
+        public void tabelaSuino(){
             
-            colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-            
-            colunaDataNascimento.setCellValueFactory(new PropertyValueFactory<>("DataNascimento"));
-            
-            colunaDataAquisicao.setCellValueFactory(new PropertyValueFactory<>("DtaAquisicao"));
-            
-            tabelaSuinos.setItems((ObservableList<Suino>) suinoDAO.readSuinos());
+            listaSuino.clear();
+            listaSuino.addAll(suinoDAO.readSuinos());
+            tabelaSuinos.setItems(listaSuino);
         }
 
     @FXML
@@ -68,4 +67,17 @@ public class ControladorSuinos {
 		} catch (IOException e) {
 		}	
 	} 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+            colunaID.setCellValueFactory(new PropertyValueFactory<Suino, Integer>("id"));
+            
+           colunaNome.setCellValueFactory(new PropertyValueFactory<Suino, String>("nome"));
+            
+          colunaDataNascimento.setCellValueFactory(new PropertyValueFactory<Suino, Date>("datanas"));
+            
+           colunaDataAquisicao.setCellValueFactory(new PropertyValueFactory<Suino, Date>("dataaqui"));
+            
+            tabelaSuino();
+    }
 }

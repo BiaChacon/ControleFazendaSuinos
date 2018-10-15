@@ -16,7 +16,7 @@
                 <TableColumn fx:id="colunaID" prefWidth="103.0" text="ID" />
                 <TableColumn fx:id="colunaNome" prefWidth="189.0" text="NOME" />
                   <TableColumn fx:id="colunaDataNascimento" prefWidth="198.0" text="DATA NASCIMENTO" />
-                  <TableColumn fx:id="DataAquisicao" prefWidth="189.0" text="DATA AQUISIÇÃO" />
+                  <TableColumn fx:id="colunaDataAquisicao" prefWidth="189.0" text="DATA AQUISIÇÃO" />
               </columns>
             </TableView>
             <JFXButton fx:id="btAdicionar" layoutX="414.0" layoutY="412.0" onAction="#adicionarSuino" style="-fx-background-color: GREEN;" text="ADICIONAR" textFill="WHITE">

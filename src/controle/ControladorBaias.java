@@ -2,10 +2,14 @@ package controle;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Date;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -16,7 +20,7 @@ import modelo.Baia;
 import persistencia.BaiaDAO;
 
 
-public class ControladorBaias {
+public class ControladorBaias implements Initializable {
     BaiaDAO baiaDAO = new BaiaDAO();
     @FXML
         private AnchorPane anchorBaias;
@@ -31,20 +35,19 @@ public class ControladorBaias {
         private TableColumn<Baia, Integer > colunaID;
   
     @FXML
-        private TableColumn<Baia, String> colunaTamanho;
+        private TableColumn<Baia, Double> colunaTamanho;
   
     @FXML
-        private TableColumn<Baia, Date> colunaLimpeza;
+        private TableColumn<Baia, Boolean> colunaLimpeza;
     
-    @FXML
+    private ObservableList<Baia> listaBaia = FXCollections.observableArrayList();
+    
+   
         public void tabelaBaia(){
-            colunaID.setCellValueFactory(new PropertyValueFactory<>("id"));
-            
-            colunaTamanho.setCellValueFactory(new PropertyValueFactory<>("Tamanho"));
-            
-            colunaLimpeza.setCellValueFactory(new PropertyValueFactory<>("Limpeza"));
-
-            tabelaBaias.setItems((ObservableList<Baia>) baiaDAO.readBaias());
+        
+            listaBaia.clear();
+            listaBaia.addAll(baiaDAO.readBaias());
+            tabelaBaias.setItems(listaBaia);
         }
   
     @FXML
@@ -63,4 +66,15 @@ public class ControladorBaias {
 		} catch (IOException e) {
 		}	
 	} 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+            colunaID.setCellValueFactory(new PropertyValueFactory<Baia, Integer>("id"));
+            
+            colunaTamanho.setCellValueFactory(new PropertyValueFactory<Baia, Double>("tam"));
+            
+            colunaLimpeza.setCellValueFactory(new PropertyValueFactory<Baia, Boolean>("limp"));
+
+            tabelaBaia();
+    }
 }

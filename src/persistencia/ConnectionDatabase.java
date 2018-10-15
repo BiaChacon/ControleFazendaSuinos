@@ -13,7 +13,7 @@ public class ConnectionDatabase {
 
 	
 	public ConnectionDatabase() {
-		this.url = "jdbc:h2:~/ControleFazendaSuinos;INIT=runscript from '~/ControleFazendaSuinos/createFazendaSuinos.sql'";
+		this.url = "jdbc:h2:~/ControleFazendaSuinos/suinos;INIT=runscript from './src/persistencia/createFazendaSuinos.sql'";
 		this.user = "admin"; 
 		this.password = "admin";
 		this.driverjdbc = "org.h2.Driver";
@@ -22,8 +22,9 @@ public class ConnectionDatabase {
 	public void dbConnection() {
 		try {
 			Class.forName(driverjdbc); 
-			connection = DriverManager.getConnection(url, user, password); 
-		} catch (Exception e) {
+			connection = DriverManager.getConnection(url, user, password);
+                        System.out.println("Conectou!");
+		} catch (ClassNotFoundException | SQLException e) {
 			System.err.println(e);
 			e.printStackTrace();
 		}

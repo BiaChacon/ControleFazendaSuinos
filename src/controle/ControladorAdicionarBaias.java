@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import persistencia.BaiaDAO;
+import persistencia.ConnectionDatabase;
 
 public class ControladorAdicionarBaias {
     private BaiaDAO baiaDAO = new BaiaDAO();
@@ -17,8 +18,8 @@ public class ControladorAdicionarBaias {
     @FXML
 	private void cadastrarBaia() {
             double tamanho = Double.parseDouble( textTamanho.getText()); ;
-                    
-            baiaDAO.insertIntoBaia(tamanho);
+            
+           baiaDAO.insertIntoBaia(tamanho);
             
             ControladorPrincipal.controlador.baias();
         }

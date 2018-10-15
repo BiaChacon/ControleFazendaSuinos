@@ -7,7 +7,6 @@ import java.util.Date;
 import javafx.fxml.FXML;
 import persistencia.SuinoDAO;
 import java.time.ZoneId;
-import java.time.LocalDate;
 
 
 public class ControladorAdicionarSuinos {

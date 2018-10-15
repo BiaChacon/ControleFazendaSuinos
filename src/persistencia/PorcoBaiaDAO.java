@@ -7,9 +7,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PorcoBaiaDAO {
-  private ConnectionDatabase c = new ConnectionDatabase();
+  /*private ConnectionDatabase c = new ConnectionDatabase();
 
-    private final String INSERT = "INSERT INTO PORCOBAIA(id) VALUES (?);";
+    private final String INSERT = "INSERT INTO PORCOBAIA(PORCO_id, BAIA_id) VALUES (?, ?);";
     
     private final String DELETE = "DELETE FROM PORCOBAIA WHERE id = ?;";
     
@@ -53,5 +53,5 @@ public class PorcoBaiaDAO {
 	}catch (SQLException e) {
                     e.printStackTrace();
         }
-    }     
+    }  */   
 }
