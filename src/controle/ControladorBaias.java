@@ -3,33 +3,49 @@ package controle;
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.sql.Date;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import modelo.Suino;
+import modelo.Baia;
+import persistencia.BaiaDAO;
+
 
 public class ControladorBaias {
-  @FXML
-    private AnchorPane anchorBaias;
-  @FXML
-    private BorderPane borderBaias;
-  @FXML
-    private  JFXButton btAdicionar, btRemover;
+    BaiaDAO baiaDAO = new BaiaDAO();
+    @FXML
+        private AnchorPane anchorBaias;
+    @FXML
+        private BorderPane borderBaias;
+    @FXML
+        private  JFXButton btAdicionar, btRemover;
   
-  @FXML
-       private TableView<Suino> tabelaBaias;
-  @FXML
-       private TableColumn<Suino, Integer > colunaID;
+    @FXML
+        private TableView<Baia> tabelaBaias;
+    @FXML
+        private TableColumn<Baia, Integer > colunaID;
   
-  @FXML
-       private TableColumn<Suino, String> colunaTamanho;
+    @FXML
+        private TableColumn<Baia, String> colunaTamanho;
   
-  @FXML
-       private TableColumn<Suino, Date> colunaLimpeza;
+    @FXML
+        private TableColumn<Baia, Date> colunaLimpeza;
+    
+    @FXML
+        public void tabelaBaia(){
+            colunaID.setCellValueFactory(new PropertyValueFactory<>("id"));
+            
+            colunaTamanho.setCellValueFactory(new PropertyValueFactory<>("Tamanho"));
+            
+            colunaLimpeza.setCellValueFactory(new PropertyValueFactory<>("Limpeza"));
+
+            tabelaBaias.setItems((ObservableList<Baia>) baiaDAO.readBaias());
+        }
   
     @FXML
 	private void adicionarBaia() {

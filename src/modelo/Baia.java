@@ -5,9 +5,10 @@ public class Baia {
     double tam;
      boolean limp = true;
 
-    public Baia(int id, double tam) {
+    public Baia(int id, double tam, boolean limp) {
         this.id = id;
         this.tam = tam;
+        this.limp = limp;
     }
 
     public int getId() {

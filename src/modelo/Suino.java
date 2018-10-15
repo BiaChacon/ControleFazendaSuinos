@@ -1,14 +1,16 @@
 package modelo;
 
+import java.sql.Date;
+
 
 public class Suino {
     int id;
     String nome;
-    int datanas;
-    int dataaqui;
+    Date datanas;
+    Date dataaqui;
    
 
-    public Suino(int id, String nome, int datanas, int dataaqui) {
+    public Suino(int id, String nome, Date datanas, Date dataaqui) {
         this.id = id;
         this.nome = nome;
         this.datanas = datanas;
@@ -31,19 +33,19 @@ public class Suino {
         this.nome = nome;
     }
 
-    public int getDatanas() {
+    public Date getDatanas() {
         return datanas;
     }
 
-    public void setDatanas(int datanas) {
+    public void setDatanas(Date datanas) {
         this.datanas = datanas;
     }
 
-    public int getDataaqui() {
+    public Date getDataaqui() {
         return dataaqui;
     }
 
-    public void setDataaqui(int dataaqui) {
+    public void setDataaqui(Date dataaqui) {
         this.dataaqui = dataaqui;
     }
 

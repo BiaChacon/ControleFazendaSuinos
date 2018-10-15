@@ -27,7 +27,9 @@ public class ControladorAdicionarSuinos {
             Date dn = Date.from(dateNascimento.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
             java.sql.Date dnSql = new java.sql.Date(dn.getTime());
             java.sql.Date daSql = new java.sql.Date(da.getTime());
+            
             suinoDAO.insertIntoSuino(textNome.getText(), dnSql , daSql);
+            
             ControladorPrincipal.controlador.suinos();
         }
 }
