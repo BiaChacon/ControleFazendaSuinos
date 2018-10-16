@@ -10,7 +10,7 @@ import modelo.Suino;
 import persistencia.PorcoBaiaDAO;
 
 public class ControladorVizualizarPorcoNaBaia {
-    PorcoBaiaDAO porcoBaiaDAO = new PorcoBaiaDAO();
+    /*PorcoBaiaDAO porcoBaiaDAO = new PorcoBaiaDAO();
     @FXML
        private TableView<Suino> tabelaPorcoBaia;
     @FXML
@@ -25,6 +25,6 @@ public class ControladorVizualizarPorcoNaBaia {
             
             colunaPorco.setCellValueFactory(new PropertyValueFactory<>("PORCO_id"));
 
-            //tabelaPorcoBaia.setItems((ObservableList<PorcoBaia>) porcoBaiaDAO.readPorcoBaia());
-        }
+            tabelaPorcoBaia.setItems((ObservableList<PorcoBaia>) porcoBaiaDAO.readPorcoBaia());
+        }*/
 }
