@@ -1,9 +1,10 @@
 package modelo;
 
 public class Baia {
+
     int id;
     double tam;
-     boolean limp = true;
+    boolean limp = true;
 
     public Baia(int id, double tam, boolean limp) {
         this.id = id;
@@ -34,7 +35,5 @@ public class Baia {
     public void setLimp(boolean limp) {
         this.limp = limp;
     }
-    
 
-    
 }

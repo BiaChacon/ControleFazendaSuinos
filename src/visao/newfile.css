@@ -1,9 +1,9 @@
 .jfx-hamburger {
-	 -fx-background-color : blueviolet ;
+    -fx-background-color : blueviolet ;
 }
 
 .jfx-hamburger StackPane {
-	 -fx-background-color : white ;
+    -fx-background-color : white ;
 }
 
 .table-view .column-header {

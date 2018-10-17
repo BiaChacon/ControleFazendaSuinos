@@ -7,17 +7,17 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorRemoverSuinos">
-   <children>
-      <Label layoutX="198.0" layoutY="142.0" text="ID Suino" textFill="RED">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="btRemover" layoutX="234.0" layoutY="280.0" onAction="#removerSuino" style="-fx-background-color: RED;" text="REMOVER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXTextField fx:id="textIDSuino" layoutX="195.0" layoutY="169.0" prefHeight="31.0" prefWidth="189.0" />
-   </children>
+    <children>
+        <Label layoutX="198.0" layoutY="142.0" text="ID Suino" textFill="RED">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btRemover" layoutX="234.0" layoutY="280.0" onAction="#removerSuino" style="-fx-background-color: RED;" text="REMOVER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXTextField fx:id="textIDSuino" layoutX="195.0" layoutY="169.0" prefHeight="31.0" prefWidth="189.0" />
+    </children>
 </AnchorPane>

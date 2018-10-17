@@ -2,19 +2,22 @@ package modelo;
 
 import java.sql.Date;
 
-
 public class Suino {
+
     int id;
     String nome;
     Date datanas;
     Date dataaqui;
-   
 
     public Suino(int id, String nome, Date datanas, Date dataaqui) {
         this.id = id;
         this.nome = nome;
         this.datanas = datanas;
         this.dataaqui = dataaqui;
+    }
+
+    public Suino() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId() {
@@ -49,6 +52,4 @@ public class Suino {
         this.dataaqui = dataaqui;
     }
 
-    
-    
 }

@@ -1,30 +1,42 @@
 package controle;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import modelo.Baia;
-import modelo.Suino;
+import modelo.PorcoBaia;
 import persistencia.PorcoBaiaDAO;
 
-public class ControladorVizualizarPorcoNaBaia {
-    /*PorcoBaiaDAO porcoBaiaDAO = new PorcoBaiaDAO();
-    @FXML
-       private TableView<Suino> tabelaPorcoBaia;
-    @FXML
-       private TableColumn<Baia, Integer > colunaBaia;
-  
-    @FXML
-       private TableColumn<Suino, Integer> colunaPorco;
-  
-    @FXML
-        public void tabelaBaia(){
-            colunaBaia.setCellValueFactory(new PropertyValueFactory<>("BAIA_id"));
-            
-            colunaPorco.setCellValueFactory(new PropertyValueFactory<>("PORCO_id"));
+public class ControladorVizualizarPorcoNaBaia implements Initializable {
 
-            tabelaPorcoBaia.setItems((ObservableList<PorcoBaia>) porcoBaiaDAO.readPorcoBaia());
-        }*/
+    PorcoBaiaDAO porcoBaiaDAO = new PorcoBaiaDAO();
+    @FXML
+    private TableView<PorcoBaia> tabelaPorcoBaia;
+    @FXML
+    private TableColumn<PorcoBaia, Integer> colunaBaia;
+
+    @FXML
+    private TableColumn<PorcoBaia, Integer> colunaPorco;
+    
+    private ObservableList<PorcoBaia> listaPorcoBaia = FXCollections.observableArrayList();
+
+    public void tabelaPorcoBaia() {
+        listaPorcoBaia.clear();
+        listaPorcoBaia.addAll(porcoBaiaDAO.readPorcoBaia());
+        tabelaPorcoBaia.setItems(listaPorcoBaia);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        colunaBaia.setCellValueFactory(new PropertyValueFactory<>("idBaia"));
+
+        colunaPorco.setCellValueFactory(new PropertyValueFactory<>("idPORCO"));
+
+        tabelaPorcoBaia();
+    }
 }

@@ -7,8 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-
 public class Principal extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root;
@@ -19,8 +19,8 @@ public class Principal extends Application {
         stage.show();
         stage.setTitle("Controle Fazenda Suinos");
     }
+
     public static void main(String[] args) {
         launch(args);
     }
 }
-

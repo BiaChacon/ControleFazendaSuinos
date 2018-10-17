@@ -13,71 +13,72 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorPrincipal">
-   <left>
-      <VBox prefHeight="787.0" prefWidth="245.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <JFXButton fx:id="btInicio" alignment="BASELINE_LEFT" onAction="#inicio" prefHeight="60.0" prefWidth="242.0" text="INÍCIO" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btSuinos" alignment="BASELINE_LEFT" onAction="#suinos" prefHeight="60.0" prefWidth="238.0" text="SUÍNOS" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btBaias" alignment="BASELINE_LEFT" onAction="#baias" prefHeight="66.0" prefWidth="233.0" text="BAIAS" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btColocarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#colocarPorcoNaBaia" prefHeight="70.0" prefWidth="227.0" text="COLOCAR PORCO NA BAIA" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btRemoverPorcoDaBaia" alignment="BASELINE_LEFT" onAction="#removerPorcoDaBaia" prefHeight="50.0" prefWidth="240.0" text="REMOVER PORCO DA BAIA" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btVizualizarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#vizualizarPorcoNaBaia" prefHeight="55.0" prefWidth="245.0" text="VIZUALIZAR PORCO NA BAIA" textFill="BLUEVIOLET">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <BorderPane.margin>
-            <Insets left="10.0" top="10.0" />
-         </BorderPane.margin>
-      </VBox>
-   </left>
-   <center>
-      <AnchorPane fx:id="anchorInicial" prefHeight="600.0" prefWidth="843.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="352.0" fitWidth="750.0" layoutX="57.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/3823406.jpg" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-   </center>
-   <top>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="labelPrincipal" alignment="CENTER" layoutX="96.0" layoutY="-3.0" prefHeight="98.0" prefWidth="1080.0" text="CONTROLE FAZENDA DE SUÍNOS" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="31.0" />
-               </font>
-            </Label>
-            <JFXHamburger prefHeight="100.0" prefWidth="89.0" stylesheets="@newfile.css" />
-         </children>
-      </AnchorPane>
-   </top>
-   <right>
-      <Pane prefHeight="600.0" prefWidth="82.0" BorderPane.alignment="CENTER" />
-   </right>
+    <left>
+        <VBox prefHeight="787.0" prefWidth="245.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="btInicio" alignment="BASELINE_LEFT" onAction="#inicio" prefHeight="60.0" prefWidth="242.0" text="INÍCIO" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btSuinos" alignment="BASELINE_LEFT" onAction="#suinos" prefHeight="60.0" prefWidth="238.0" text="SUÍNOS" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btBaias" alignment="BASELINE_LEFT" onAction="#baias" prefHeight="66.0" prefWidth="233.0" text="BAIAS" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btColocarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#colocarPorcoNaBaia" prefHeight="70.0" prefWidth="227.0" text="COLOCAR PORCO NA BAIA" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btRemoverPorcoDaBaia" alignment="BASELINE_LEFT" onAction="#removerPorcoDaBaia" prefHeight="50.0" prefWidth="240.0" text="REMOVER PORCO DA BAIA" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btVizualizarPorcoNaBaia" alignment="BASELINE_LEFT" onAction="#vizualizarPorcoNaBaia" prefHeight="55.0" prefWidth="245.0" text="VIZUALIZAR PORCO NA BAIA" textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets left="10.0" top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane fx:id="anchorInicial" prefHeight="600.0" prefWidth="843.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="352.0" fitWidth="750.0" layoutX="69.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/3823406.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </center>
+    <top>
+        <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: blueviolet;" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="labelPrincipal" alignment="CENTER" layoutX="96.0" layoutY="-3.0" prefHeight="98.0" prefWidth="1080.0" text="CONTROLE FAZENDA DE SUÍNOS" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="31.0" />
+                    </font>
+                </Label>
+                <JFXHamburger prefHeight="100.0" prefWidth="89.0" stylesheets="@newfile.css" />
+            </children>
+        </AnchorPane>
+    </top>
+    <right>
+        <Pane prefHeight="600.0" prefWidth="82.0" BorderPane.alignment="CENTER" />
+    </right>
 </BorderPane>
