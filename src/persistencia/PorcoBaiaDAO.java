@@ -19,30 +19,30 @@ public class PorcoBaiaDAO {
 
     private final String LIST = "SELECT * FROM PORCOBAIA ORDER BY idBaia";
 
-    public Integer pegarID(String nome) throws SQLException {
+    public String pegarNome(int id) throws SQLException {
         ResultSet rs = null;
-        int id = 0;
+        String nome = "";
 
-        String query = ("SELECT id FROM SUINOS WHERE NOME = " + nome.toUpperCase() + "");
+        String query = ("SELECT nome FROM SUINO WHERE id = " + id + "");
 
         try {
             PreparedStatement stm = c.getConnection().prepareStatement(query);
             rs = stm.executeQuery(query);
 
-            id = rs.getInt("numero");
+            nome = rs.getString("nome");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return id;
+        return nome;
     }
 
     public void insertIntoPorcoBaia(int idPorco, int idBaia) {
         c.dbConnection();
         try {
             PreparedStatement pst = c.getConnection().prepareStatement(INSERT);
-            pst.setInt(1, idBaia);
-            pst.setInt(2, idPorco);
+            pst.setInt(1, idPorco);
+            pst.setInt(2, idBaia);
             pst.executeUpdate();
 
         } catch (SQLException ex) {

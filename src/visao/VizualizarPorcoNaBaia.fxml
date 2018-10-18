@@ -8,7 +8,7 @@
     <children>
         <TableView fx:id="tabelaPorcoBaia" layoutX="132.0" layoutY="51.0" prefHeight="324.0" prefWidth="529.0" stylesheets="@newfile.css">
             <columns>
-                <TableColumn fx:id="colonaPorco" prefWidth="264.0" text="PORCO" />
+                <TableColumn fx:id="colunaPorco" prefWidth="264.0" text="PORCO" />
                 <TableColumn fx:id="colunaBaia" prefWidth="264.0" text="BAIA" />
             </columns>
         </TableView>

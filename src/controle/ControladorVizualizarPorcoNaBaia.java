@@ -15,28 +15,49 @@ import persistencia.PorcoBaiaDAO;
 public class ControladorVizualizarPorcoNaBaia implements Initializable {
 
     PorcoBaiaDAO porcoBaiaDAO = new PorcoBaiaDAO();
+
     @FXML
     private TableView<PorcoBaia> tabelaPorcoBaia;
+
     @FXML
     private TableColumn<PorcoBaia, Integer> colunaBaia;
 
     @FXML
     private TableColumn<PorcoBaia, Integer> colunaPorco;
-    
+
     private ObservableList<PorcoBaia> listaPorcoBaia = FXCollections.observableArrayList();
 
     public void tabelaPorcoBaia() {
         listaPorcoBaia.clear();
-        listaPorcoBaia.addAll(porcoBaiaDAO.readPorcoBaia());
+
+        listaPorcoBaia.addAll( porcoBaiaDAO.readPorcoBaia());
+
         tabelaPorcoBaia.setItems(listaPorcoBaia);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        colunaBaia.setCellValueFactory(new PropertyValueFactory<>("idBaia"));
+        colunaBaia.setCellValueFactory(new PropertyValueFactory<PorcoBaia, Integer>("idBaia"));
 
-        colunaPorco.setCellValueFactory(new PropertyValueFactory<>("idPORCO"));
+        colunaPorco.setCellValueFactory(new PropertyValueFactory<PorcoBaia, Integer>("idPorco"));
 
         tabelaPorcoBaia();
     }
 }
+       /* listaPorcoBaia.clear();
+
+        List<PorcoBaia> porcos = porcoBaiaDAO.readPorcoBaia();
+
+        for (PorcoBaia p : porcos) {
+            try {
+                p.setNome(porcoBaiaDAO.pegarNome(p.getIdPorco()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ControladorVizualizarPorcoNaBaia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          
+        }
+        
+        listaPorcoBaia.addAll();
+
+        tabelaPorcoBaia.setItems(listaPorcoBaia);
+    */

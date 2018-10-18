@@ -52,4 +52,9 @@ public class Suino {
         this.dataaqui = dataaqui;
     }
 
+    @Override
+    public String toString() {
+        return nome;
+    }
+
 }

@@ -36,4 +36,9 @@ public class Baia {
         this.limp = limp;
     }
 
+    @Override
+    public String toString() {
+        return "Baia " + id ;
+    }
+
 }

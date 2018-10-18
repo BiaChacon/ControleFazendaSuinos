@@ -4,6 +4,15 @@ public class PorcoBaia {
 
     private int idPorco;
     private int idBaia;
+    private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public PorcoBaia(int idPorco, int idBaia) {
         this.idPorco = idPorco;
