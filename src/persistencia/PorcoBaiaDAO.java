@@ -18,19 +18,25 @@ public class PorcoBaiaDAO {
     private final String DELETE = "DELETE FROM PORCOBAIA WHERE idPorco = ?;";
 
     private final String LIST = "SELECT * FROM PORCOBAIA ORDER BY idBaia";
+    
+    private final String NOMEID = "SELECT nome FROM SUINO WHERE id = ?;";
 
-    public String pegarNome(int id) throws SQLException {
-        ResultSet rs = null;
+    public String pegarNome(int id) {
         String nome = "";
-
-        String query = ("SELECT nome FROM SUINO WHERE id = " + id + "");
-
         try {
-            PreparedStatement stm = c.getConnection().prepareStatement(query);
-            rs = stm.executeQuery(query);
+            c.dbConnection();
+            PreparedStatement ps;
+            ps = c.getConnection().prepareStatement(NOMEID);
 
-            nome = rs.getString("nome");
+            ps.setInt(1, id);
 
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                nome = rs.getString("nome");
+
+            }
+            c.dbConnectionClose();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,7 @@
 package controle;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,14 +24,22 @@ public class ControladorVizualizarPorcoNaBaia implements Initializable {
     private TableColumn<PorcoBaia, Integer> colunaBaia;
 
     @FXML
-    private TableColumn<PorcoBaia, Integer> colunaPorco;
+    private TableColumn<PorcoBaia, String> colunaPorco;
 
     private ObservableList<PorcoBaia> listaPorcoBaia = FXCollections.observableArrayList();
 
     public void tabelaPorcoBaia() {
+
         listaPorcoBaia.clear();
 
-        listaPorcoBaia.addAll( porcoBaiaDAO.readPorcoBaia());
+        List<PorcoBaia> porcos = porcoBaiaDAO.readPorcoBaia();
+
+        for (PorcoBaia p : porcos) {
+            p.setNome(porcoBaiaDAO.pegarNome(p.getIdPorco()));
+
+        }
+
+        listaPorcoBaia.addAll(porcos);
 
         tabelaPorcoBaia.setItems(listaPorcoBaia);
     }
@@ -39,25 +48,8 @@ public class ControladorVizualizarPorcoNaBaia implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         colunaBaia.setCellValueFactory(new PropertyValueFactory<PorcoBaia, Integer>("idBaia"));
 
-        colunaPorco.setCellValueFactory(new PropertyValueFactory<PorcoBaia, Integer>("idPorco"));
+        colunaPorco.setCellValueFactory(new PropertyValueFactory<PorcoBaia, String>("nome"));
 
         tabelaPorcoBaia();
     }
 }
-       /* listaPorcoBaia.clear();
-
-        List<PorcoBaia> porcos = porcoBaiaDAO.readPorcoBaia();
-
-        for (PorcoBaia p : porcos) {
-            try {
-                p.setNome(porcoBaiaDAO.pegarNome(p.getIdPorco()));
-            } catch (SQLException ex) {
-                Logger.getLogger(ControladorVizualizarPorcoNaBaia.class.getName()).log(Level.SEVERE, null, ex);
-            }
-          
-        }
-        
-        listaPorcoBaia.addAll();
-
-        tabelaPorcoBaia.setItems(listaPorcoBaia);
-    */
